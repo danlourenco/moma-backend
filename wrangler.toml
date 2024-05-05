@@ -1,0 +1,30 @@
+name = "moma-backend"
+compatibility_date = "2023-12-01"
+
+# [vars]
+# MY_VAR = "my-variable"
+
+# [[kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# [[r2_buckets]]
+# binding = "MY_BUCKET"
+# bucket_name = "my-bucket"
+
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "my-database"
+# database_id = ""
+
+# [ai]
+# binding = "AI"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "preview-moma-gallery"
+database_id = "270cbedd-aa0a-44f0-83e1-4ec001bb6c01"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "preview-moma-gallery"
