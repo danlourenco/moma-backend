@@ -46,12 +46,11 @@ exhibits.post("/", async (c) => {
   }
 
   const { success } = await c.env.DB.prepare(
-    `insert into exhibits (artist, title, year, medium, details, artist_statement, image_key, audio_key) values (?, ?, ?, ?, ?, ?, ?, ?)`
+    `insert into exhibits (artist, title, medium, details, artist_statement, image_key, audio_key) values (?, ?, ?, ?, ?, ?, ?)`
   )
     .bind(
       body.artistName,
       body.title,
-      body.year,
       body.medium,
       body.details,
       body.artistStatement,
