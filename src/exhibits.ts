@@ -41,6 +41,10 @@ exhibits.post("/", async (c) => {
     audio
   );
 
+  if (!imagePutResponse || !audioPutResponse) {
+    throw new HTTPException(500, { message: "Failed to upload media" });
+  }
+
   const { success } = await c.env.DB.prepare(
     `insert into exhibits (artist, title, year, medium, details, artist_statement, image_key, audio_key) values (?, ?, ?, ?, ?, ?, ?, ?)`
   )
